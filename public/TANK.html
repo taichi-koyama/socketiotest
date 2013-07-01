@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD> 
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<TITLE>svg_websocket</TITLE>
+</HEAD>
+<BODY>
+<table>
+<object id="object" data="tank.svg" style="padding: 20px; width: 600px; height: 600px">
+</table>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" >
+	//socketioで時刻を送る
+	var socket = io.connect();
+
+	//new Date().getTime();
+	var dt = new Date();
+
+	//接続時
+	socket.on('connect', function(data) {
+		socket.emit('msg', dt.getSeconds());
+		socket.on('msg', function(msg){
+			//alert(msg);
+			$("#svg_19").text( msg);
+		});
+	});
+</script>
+</BODY>
+</HTML>

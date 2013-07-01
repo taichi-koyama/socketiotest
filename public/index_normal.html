@@ -1,0 +1,241 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>JWS TEST</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+<style type="text/css">
+#main {
+    background: gainsboro;
+}
+#sub {
+    background: crimson;
+}
+
+/* 幅 480px 以上の時の指定 */
+@media (min-width: 480px) {
+    #main {
+        float: left;
+        width: 70%;
+        height: 185px;
+    }
+    #sub {
+        float: right;
+        width:28%;
+        height: 185px;
+    }
+}
+
+/* 幅 479px 以下の時の指定 */
+@media (max-width: 479px) {
+	#main {
+    	width: 100%;
+        height: 220px;
+		float: none;
+	}
+
+	#sub {
+    	margin-top: 10px;
+    	width: 100%;
+    	height: 100px;
+		float: none;
+	}
+}
+</style>
+</head>    
+<body>
+メディアクエリ：デバイスの大きさに従ってデザインを変えることが可能です。
+<div id="main">
+<!--<svg width="800" height="600">-->
+<svg width="800" height="600">
+	<defs>
+		<radialGradient id="svg_10" spreadMethod="pad">
+			<stop stop-color="#ff0000" offset="0"/>
+			<stop stop-color="#00ffff" offset="1"/>
+		</radialGradient>
+		<radialGradient id="svg_11" spreadMethod="pad">
+			<stop stop-color="#ff0000" offset="0"/>
+			<stop stop-color="#00ffff" offset="1"/>
+		</radialGradient>
+		<radialGradient id="svg_12" spreadMethod="pad" cx="0.5" cy="0.5" r="0.5">
+			<stop stop-color="#ff0000" offset="0"/>
+			<stop stop-color="#ff5656" stop-opacity="0.996094" offset="1"/>
+		</radialGradient>
+		<linearGradient id="svg_13" spreadMethod="pad" x2="1" y2="0.410156" x1="0" y1="0.398438">
+			<stop stop-color="#9e8b8b" offset="0"/>
+			<stop stop-color="#617474" offset="0.502625"/>
+			<stop stop-color="#b5b5bc" stop-opacity="0.996094" offset="1"/>
+		</linearGradient>
+		<linearGradient id="svg_14">
+			<stop stop-color="#9e8b8b" offset="0"/>
+			<stop stop-color="#617474" offset="0.463562"/>
+			<stop stop-color="#b4b4c1" stop-opacity="0.996094" offset="0.987"/>
+		</linearGradient>
+		<linearGradient id="svg_15">
+			<stop stop-color="#9e8b8b" offset="0"/>
+			<stop stop-color="#617474" offset="0.494812"/>
+			<stop stop-color="#9595bc" stop-opacity="0.996094" offset="0.983093"/>
+		</linearGradient>
+		<radialGradient id="svg_16" spreadMethod="pad">
+			<stop stop-color="#9e8b8b" offset="0"/>
+			<stop stop-color="#617474" offset="0.463562"/>
+			<stop stop-color="#b4b4c1" stop-opacity="0.996094" offset="0.987"/>
+		</radialGradient>
+		<radialGradient id="svg_17" spreadMethod="pad">
+			<stop stop-color="#9e8b8b" offset="0"/>
+			<stop stop-color="#617474" offset="1"/>
+		</radialGradient>
+		<radialGradient id="svg_18" spreadMethod="pad" cx="0.5" cy="0.5" r="0.5">
+			<stop stop-color="#9e8b8b" offset="0"/>
+			<stop stop-color="#617474" offset="1"/>
+		</radialGradient>
+	</defs>
+
+	<g>
+		<title>circle</title>
+		<circle id="circle1" cx="100" cy="100" r="75" fill="red" stroke-width="1px">
+		<animateColor attributeName="fill" attributeType="css" to="blue" begin="0s" dur="5s" repeatCount="indefinite"/>
+		<animateTransform attributeName="transform" attributeType="XML" type="scale" to="1" begin="0s" dur="5s"/ repeatCount="indefinite">
+		</circle>
+	</g>	
+  
+	<g>
+		<title>TANK</title>
+		<ellipse fill="url(#svg_18)" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="180.999992" cy="88" id="svg_2" rx="125.499992" ry="35" stroke="#5e5050"/>
+		<ellipse fill="url(#svg_17)" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="181.499995" cy="355.5" rx="124.999995" ry="35" id="svg_5" stroke="#5e5050"/>
+		<rect fill="url(#svg_13)" stroke="#5e5050" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="56" y="89" width="251" height="268" id="svg_1"/>
+		<rect fill="#252bd1" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="73" y="103.000004" width="36" height="250" id="svg_6" stroke="#383434">
+			<set attributeType="css" attributeName="fill" to="#00FF00" begin="mouseover" end="mouseout" />
+			<animate attributeName="height" attributeType="XML" begin="0s" dur="5s" repeatCount="indefinite" from="0" to="250"/>
+			<!--<animate attributeName="y" attributeType="XML" begin="0s" dur="1s" fill="freeze" from="250" to="0"/>-->
+			<!--<animateColor attributeName="fill" attributeType="CSS" from="#D7223E" to="black" begin="2s" dur="1s" fill="freeze"/>-->
+		</rect>  
+	</g>
+
+	<g>
+		<title>LAMP</title>
+		<ellipse fill="#9e8b8b" stroke="#5e5050" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="484" cy="117" id="svg_7" rx="69" ry="69"/>
+		<ellipse id="svg_9" fill="#ff0000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="484.999998" cy="116.999998" rx="58.499998" ry="58.499998" stroke="#5e5050"></ellipse>
+	</g>
+	
+	<g>
+		<title>TEXT</title>
+		<rect fill="#ffffff" stroke="#383434" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="387" y="266" width="184" height="59" id="svg_20"/>
+		<text fill="#000000" stroke-width="1" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="452" y="294" id="svg_19" font-size="12" font-family="serif" text-anchor="middle" xml:space="preserve" stroke="#383434" transform="matrix(3.44753 0 0 1.69854 -1081.29 -188.913)">秒</text>
+	</g>
+	<script type="text/ecmascript">
+		<![CDATA[
+		    // set element onclick event handler
+		    window.onload=function () {
+		    var svg_9 = document.getElementById("svg_9");
+		    // onclick event handler, change circle radius
+		    svg_9.onclick = function() {
+		        var color = this.getAttribute("fill");
+		        if (color == "#ff0000") {
+		            this.setAttribute("fill","#0000ff");
+		        } else {
+		            this.setAttribute("fill","#ff0000");
+		        }
+		    }
+		}
+		]]>
+	</script>
+</svg>
+</div>
+
+<div id="sub">
+
+</div>
+
+
+<TABLE border="1">
+	<TBODY>
+		<TR>
+			<TD>Android標準ブラウザ</TD>
+			<TD>
+				Circle：animateできない<br>
+				TANK：animateできない<br>
+				LAMP：クリックできない<br>
+				TEXT：SocketioでのWebsocket通信ができない<br>
+			</TD>
+		</TR>
+		<TR>
+			<TD>Android Chrome</TD>
+			<TD>
+				Circle：○<br>
+				TANK:○<br>
+				LAMP：○<br>
+				TEXT：○<br>
+			</TD>
+		</TR>
+		<TR>
+			<TD>Android Firefox</TD>
+			<TD>
+				Circle：animateColorが動作しない<br>
+				TANK：マウスオーバーが効かない<br>
+				LAMP：○<br>
+				TEXT：○<br>
+			</TD>
+		</TR>
+		<TR>
+			<TD>Windows Chome27</TD>
+			<TD>
+				Circle：○<br>
+				TANK:○<br>
+				LAMP：○<br>
+				TEXT：○<br>
+			</TD>
+
+		</TR>
+		<TR>
+			<TD>Windows Firefox22</TD>
+			<TD>
+				Circle：animateColorが動作しない<br>
+				TANK:○<br>
+				LAMP：○<br>
+				TEXT：○<br>
+			</TD>
+
+		</TR>
+		<TR>
+			<TD>Windows IE9</TD>
+			<TD>
+				SVGが表示されない<br>
+			</TD>
+
+		</TR>
+		<TR>
+			<TD>Windows IE10</TD>
+			<TD>
+				Circle：animateColorが動作しない<br>
+				TANK:animateColorが動作しない<br>
+				LAMP：○<br>
+				TEXT：○<br>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" >
+	//socketioで時刻を送る
+	var socket = io.connect();
+
+	//new Date().getTime();
+	var dt = new Date();
+
+	//接続時
+	socket.on('connect', function(data) {
+		socket.emit('msg', dt.getSeconds());
+		socket.on('msg', function(msg){
+			//alert(msg);
+			$("#svg_19").text( msg);
+		});
+	});
+</script>
+</body>
+</html>
